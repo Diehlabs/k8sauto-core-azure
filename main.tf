@@ -2,17 +2,6 @@ provider "azurerm" {
   features {}
 }
 
-locals {
-  tags = {
-    region            = "westus"
-    environment       = "dev"
-    cost_center       = "06660"
-    owner             = "t-go"
-    product           = "private-aks"
-    technical_contact = "def-not-me"
-  }
-}
-
 resource "azurerm_resource_group" "k8sauto_core" {
   name     = "k8sauto-core"
   location = local.tags.region
