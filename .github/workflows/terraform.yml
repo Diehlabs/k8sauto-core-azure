@@ -42,9 +42,9 @@ jobs:
     # - name: Rename vars file
     #   run: mv terraform.auto.tfvars.template terraform.auto.tfvars
 
-    - name: Install requirements
-      id: pip
-      run: pip3 install -r ansible/requirements.txt
+    # - name: Install requirements
+    #   id: pip
+    #   run: pip3 install -r ansible/requirements.txt
 
     - name: Terraform Plan
       id: plan
