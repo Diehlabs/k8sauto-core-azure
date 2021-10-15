@@ -2,7 +2,7 @@ terraform {
   backend "remote" {
     organization = "Diehlabs"
     workspaces {
-      name = "iac-azure-k8sauto"
+      name = "k8sauto-core-azure"
     }
   }
   required_version = "~> 1.0.0"

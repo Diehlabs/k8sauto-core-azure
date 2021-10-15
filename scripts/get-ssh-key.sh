@@ -8,3 +8,5 @@ echo "URL: ${URL}"
 STATE_OUTPUTS=`curl --header "Authorization: Bearer $TFE_TOKEN" --header "Content-Type: application/vnd.api+json" $URL`
 echo $STATE_OUTPUTS | jq -rC .data[0].attributes.value.private_key_pem > ./aks.key
 chmod +x ./aks.key
+echo "Key contents:"
+cat ./aks.key
